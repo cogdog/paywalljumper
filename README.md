@@ -4,7 +4,7 @@ by Alan Levine https://cog.dog or http://cogdogblog.com/
 
 Make a bookmarklet for old school way (browser bookmarklets) to jump over the New York times paywall. The trick is getting an article's link showing up im Google search results, as that seems (for now) to jump the wall.
 
-![Paywall Jumpers](docs/background.jph "Paywall Jumpers")
+![Paywall Jumpers](docs/background.jpg "Paywall Jumpers")
 *[Album Cover Jump!](https://flickr.com/photos/gomattolson/1161833340) flickr photo by [gomattolson](https://flickr.com/people/gomattolson) shared under a [Creative Commons (BY-SA) license](https://creativecommons.org/licenses/by-sa/2.0/) modified by Alan Levine to include the a screen shot of the paywall shared also under a [Creative Commons (BY) license](https://creativecommons.org/licenses/by/2.0/)*
 
 What? Just try it to see how it works at https://cogdog.github.io/paywalljumper then get the Bookmarklet
