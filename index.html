@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>New York Times Paywall Jumper Bookmarklet</title>
+
+    <!-- Bootstrap and icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <!-- big fan of this favicon 
+          Search by Wireform CC BY from NounProject.com
+          https://thenounproject.com/icon/search-1107493/ -->
+    <link rel="shortcut icon" type="image/png" href="cc-search.png"/>
+    
+	<!-- let the styling commence -->
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+ <div class="container"> 
+	<div class="jumbotron">
+	  <h1 id="sitenane" class="display-4 text-center">New York Times Paywall Jumper</h1>
+	  <p>Do you tire of shared links to articles shared from the New York Times that you cannot read because of their paywall that covers he screen when you are maybe just into the article? This bookmarket does an end around by pushing words form an article's title through a google search... because clicking an article's link from a Google search jumps right over that paywall</p>
+	
+		<div class="row">
+   	 		<div class="col-6  text-center">
+   	 			<h3>Enter Key Words</h3> 
+   	 			<p>Upon being called, the bookmarklet opens a dialog box to enter search term in a NYT article. Try it with the button below, enter a few words from an article</p>
+   	 		</div>
+	  		<div class="col-6  text-center">
+	  			<h3>Selected Text</h3>
+	  			<p>Select text in any web page that mentions an article itle, then click bookmarklet to trigger search. Try with selecting any words in the box from selected articles, then try the button:</p>
+	  		</div>
+	  	</div>
+	  	
+	<div class="row align-items-center">
+   	 	<div class="col-6  text-center">
+   	 		<img width="378" height="150" alt="search" src="search.jpg" id="searchimg">
+   	 		
+   	  	</div>
+   	  	
+		<div class="col-6 text-center">
+			<p id="funtext"> Oliver Sacks My Periodic Table &bull; Amazon Introduces Q &bull; Deadly Salmonella Outbreak &bull; My Life With Long Covid &bull; World’s Only Vegemite Factory &bull; America’s Truckers Face Chronic Headache &bull;  Tokyo Taxi Driver Charged Running Down Pigeon &bull; Ok Call It Soccer&bull;
+</p>
+			
+   		
+		</div>
+   	</div>
+   	
+   	<div class="row">
+		<div class="col-6  text-center">
+			<button type="button" class="btn btn-secondary btn-sm" id="keymode">Search for entered keywords</button>
+		</div>
+		<div class="col-6  text-center">
+			 <button type="button" class="btn btn-secondary btn-sm" id="selectmode">Search for selected keywords</button>
+		</div>
+	</div>
+   	
+  
+  	<div class="row" style="margin-top: 1em">
+  		<div class="col-12 text-center">
+  	
+			<p>Make it your own! Drag button to your browser bookmark bar. Click and search away...</p>
+		
+		<p><a href="javascript:(function() %7Bs%3Dwindow.getSelection()%2B%27%27%3Bif(!s) s%3Dprompt(%27Jump the NYT paywall through Google search for an article with these words in the title...%27,%27%27)%3B if (s) w%3Dwindow.open(%27https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dsite%253Anytimes.com%2520%27%2BencodeURIComponent(s))%3B%7D)()" class="btn btn-primary btn-lg" id="marklet">NYT Paywall Jumper</a></p>
+		
+		
+ 		</div>
+	</div>
+	
+	
+ </div>
+	
+	<div id="footer" class="container-fluid text-center">
+		<p>
+		<!-- background image attribution -->
+		<a href="https://flickr.com/photos/gomattolson/1161833340">Album Cover Jump!</a> flickr photo by <a href="https://flickr.com/people/gomattolson">gomattolson</a> shared under a <a href="https://creativecommons.org/licenses/by-sa/2.0/">Creative Commons (BY-SA) license</a> modified by Alan Levine to include the a screen shot of the paywall shared also under a  <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons (BY) license</a><br />
+		</p>
+		
+		<p>
+		<!-- code credit, thanks for keeping -->
+		code by <a href="http://cog.dog/"> @cogdog</a> and <a href="https://github.com/cogdog/paywalljumper">available on github</a>
+		</p>
+	</div>
+</div>
+<!--  JavaScript libs 
+	   jQuery first, then Bootstrap JS, and finally Backstretch -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.1.18/jquery.backstretch.min.js" integrity="sha512-bXc1hnpHIf7iKIkKlTX4x0A0zwTiD/FjGTy7rxUERPZIkHgznXrN/2qipZuKp/M3MIcVIdjF4siFugoIc2fL0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- custom scripts for the  machine -->
+    <script>
+    // backstrech the background image -->
+    $.backstretch([
+      { url: "background.jpg", alignY: "bottom" }
+    ]);
+    //$.backstretch("background.jpg",);
+
+	// set up the generate button
+	$(document).ready(function(){	
+	
+		$( "#keymode" ).click(function() {
+			s = prompt('Jump the NYT paywall through Google search for an article with these words in the title...','');
+			if (s) {
+				window.open('https://www.google.com/search?q=site%3Anytimes.com+' + encodeURIComponent(s), '_blank');
+				}
+		});	
+		
+		$( "#selectmode" ).click(function() {
+			// get selected text
+			let selection = window.getSelection();
+			// check if selection is in the permitted ID
+			if (selection.anchorNode.parentNode.id == 'funtext') {
+				window.open('https://www.google.com/search?q=site%3Anytimes.com+' + encodeURIComponent(selection.toString()), '_blank');
+			} else {
+				alert('For this demo, selected text must be from the box!');
+
+			}
+		});
+		
+		
+	});	
+    
+    </script>
+
+</body>
+</html>
