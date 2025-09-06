@@ -6,7 +6,7 @@ Make a bookmarklet for old school way (browser bookmarklets) to jump over all th
 
 This simple tool lets you make use of archive.today to find or create openly readable versions of paywalled articles. Sure it is likely to be hunted down and vanquished by the news cartel, but the creator sure is crafty. 
 
-Some blogger [spewed stuffy about this approach](https://cogdogblog.com/2025/08/jump-the-paywalls-and-help-others-over-the-top/).
+Some blogger [spewed stuff about this approach](https://cogdogblog.com/2025/08/jump-the-paywalls-and-help-others-over-the-top/).
 
 ![Paywall Jumpers](docs/background.jpg "Paywall Jumpers")
 *[Album Cover Jump!](https://flickr.com/photos/gomattolson/1161833340) flickr photo by [gomattolson](https://flickr.com/people/gomattolson) shared under a [Creative Commons (BY-SA) license](https://creativecommons.org/licenses/by-sa/2.0/) modified by Alan Levine to include the a screen shot of the paywall shared also under a [Creative Commons (BY) license](https://creativecommons.org/licenses/by/2.0/)*
