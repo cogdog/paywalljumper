@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>New York Times Paywall Jumper Bookmarklet</title>
+	<title>Paywall Jumper Bookmarklet</title>
 
     <!-- Bootstrap and icons CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -21,42 +21,12 @@
 <body>
  <div class="container"> 
 	<div class="jumbotron">
-	  <h1 id="sitenane" class="display-4 text-center">New York Times Paywall Jumper</h1>
-	  <p>Do you tire of shared links to articles shared from the New York Times that you cannot read because of their paywall that covers he screen when you are maybe just into the article? This bookmarket does an end around by pushing words form an article's title through a google search... because clicking an article's link from a Google search jumps right over that paywall</p>
+	  <h1 id="sitenane" class="display-4 text-center">Jump the Paywall!</h1>
+	  <p>Do you tire of shared links to articles shared from the New York Times, Washington Post, Wired, the Bumtown Home News that you cannot read because of their paywall that blocks an article after you bit into a paragraph? This bookmarklet lets you leap over that hurdle, and read content ad/content free via <a href="https://archive.today" target="_blank">archive.today</a></p>
+	  
+	  <p>Sure it may not be kosher and it may not last forever, but read the web the way it was meant to be! And don't share paywall links! Learn more <a href="https://cogdogblog.com/2025/08/jump-the-paywalls-and-help-others-over-the-top/">in some blogger's rant</a>.</p>
 	
-		<div class="row">
-   	 		<div class="col-6  text-center">
-   	 			<h3>Enter Key Words</h3> 
-   	 			<p>Upon being called, the bookmarklet opens a dialog box to enter search term in a NYT article. Try it with the button below, enter a few words from an article</p>
-   	 		</div>
-	  		<div class="col-6  text-center">
-	  			<h3>Selected Text</h3>
-	  			<p>Select text in any web page that mentions an article itle, then click bookmarklet to trigger search. Try with selecting any words in the box from selected articles, then try the button:</p>
-	  		</div>
-	  	</div>
-	  	
-	<div class="row align-items-center">
-   	 	<div class="col-6  text-center">
-   	 		<img width="378" height="150" alt="search" src="search.jpg" id="searchimg">
-   	 		
-   	  	</div>
-   	  	
-		<div class="col-6 text-center">
-			<p id="funtext"> Oliver Sacks My Periodic Table &bull; Amazon Introduces Q &bull; Deadly Salmonella Outbreak &bull; My Life With Long Covid &bull; World’s Only Vegemite Factory &bull; America’s Truckers Face Chronic Headache &bull;  Tokyo Taxi Driver Charged Running Down Pigeon &bull; Ok Call It Soccer&bull;
-</p>
-			
-   		
-		</div>
-   	</div>
-   	
-   	<div class="row">
-		<div class="col-6  text-center">
-			<button type="button" class="btn btn-secondary btn-sm" id="keymode">Search for entered keywords</button>
-		</div>
-		<div class="col-6  text-center">
-			 <button type="button" class="btn btn-secondary btn-sm" id="selectmode">Search for selected keywords</button>
-		</div>
-	</div>
+
    	
   
   	<div class="row" style="margin-top: 1em">
@@ -64,7 +34,7 @@
   	
 			<p>Make it your own! Drag button to your browser bookmark bar. Click and search away...</p>
 		
-		<p><a href="javascript:(function() %7Bs%3Dwindow.getSelection()%2B%27%27%3Bif(!s) s%3Dprompt(%27Jump the NYT paywall through Google search for an article with these words in the title...%27,%27%27)%3B if (s) w%3Dwindow.open(%27https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dsite%253Anytimes.com%2520%27%2BencodeURIComponent(s))%3B%7D)()" class="btn btn-primary btn-lg" id="marklet">NYT Paywall Jumper</a></p>
+		<p><a href="javascript:(function()%7Bconst baseUrl %3D 'https%3A%2F%2Farchive.ph%2F''%3Bconst currentUrl %3D encodeURI(window.location.href)%3Bwindow.location.href %3D baseUrl %2B currentUrl%7D)()" class="btn btn-primary btn-lg" id="marklet">Jump the Paywalls!</a></p>
 		
 		
  		</div>
